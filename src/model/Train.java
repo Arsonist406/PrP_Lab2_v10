@@ -1,4 +1,4 @@
-package models;
+package model;
 
 import java.time.LocalTime;
 
@@ -6,17 +6,17 @@ public class Train {
     private String destination;
     private int trainNumber;
     private LocalTime dispatchTime;
-    private int placesAmount;
+    private int generalPlaces;
     private int kupePlaces;
     private int platskartPlaces;
     private int luxPlaces;
 
-    public Train(String destination, int trainNumber, LocalTime dispatchTime, int placesAmount,
+    public Train(String destination, int trainNumber, LocalTime dispatchTime, int generalPlaces,
                  int kupePlaces, int platskartPlaces, int luxPlaces) {
         this.destination = destination;
         this.trainNumber = trainNumber;
         this.dispatchTime = dispatchTime;
-        this.placesAmount = placesAmount;
+        this.generalPlaces = generalPlaces;
         this.kupePlaces = kupePlaces;
         this.platskartPlaces = platskartPlaces;
         this.luxPlaces = luxPlaces;
@@ -34,8 +34,8 @@ public class Train {
         return dispatchTime;
     }
 
-    public int getPlacesAmount() {
-        return placesAmount;
+    public int getGeneralPlaces() {
+        return generalPlaces;
     }
 
     public int getKupePlaces() {
@@ -62,8 +62,8 @@ public class Train {
         this.dispatchTime = dispatchTime;
     }
 
-    public void setPlacesAmount(int placesAmount) {
-        this.placesAmount = placesAmount;
+    public void setGeneralPlaces(int generalPlaces) {
+        this.generalPlaces = generalPlaces;
     }
 
     public void setKupePlaces(int kupePlaces) {
@@ -80,7 +80,7 @@ public class Train {
 //////////////////////////////////////////////////////////////////////////
     public String toString() {
         return "\nTrain:" + "\nDestination: " + getDestination() + "\nTrain Number: " + getTrainNumber() +
-                "\nDispatch: " + getDispatchTime() + "\nPlaces Amount: " + getPlacesAmount() + "\n\nKupe: " +
-                getKupePlaces() + "\n\nPlatskart: " + getPlatskartPlaces() + "\n\nLux: " + getLuxPlaces() + "\n";
+                "\nDispatch: " + getDispatchTime() + "\n******************" + "\nGeneral Places: " + getGeneralPlaces() + "\nKupe: " +
+                getKupePlaces() + "\nPlatskart: " + getPlatskartPlaces() + "\nLux: " + getLuxPlaces() + "\n";
     }
 }
